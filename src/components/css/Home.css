@@ -1,0 +1,23 @@
+.Home {
+    text-align: center;
+}
+
+img {
+    height: 200px;
+    width: 200;
+}
+
+.Links {
+    color: blue;
+    font-weight: bold;
+    font-size: large;
+}
+
+span {
+    margin-left: 10px;
+}
+
+.balance {
+    font-size: large;
+
+}

@@ -1,0 +1,13 @@
+.UserProfile {
+    text-align: center;
+}
+
+.userName {
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+.memberSince {
+    font-size: large;
+    margin-bottom: 20px;
+}
