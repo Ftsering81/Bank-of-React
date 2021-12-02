@@ -1,0 +1,16 @@
+.Debits {
+    text-align: center;
+}
+ul {
+    text-align: center;
+    list-style: none;
+}
+
+label[for="amount"] {
+    margin-left: 20px;
+}
+
+button {
+    margin-left: 20px;
+}
+

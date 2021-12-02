@@ -1,8 +1,9 @@
 // src/components/UserProfile.js
 
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import AccountBalance from './AccountBalance';
 import './css/UserProfile.css'
+import NavigationLinks from './NavigationLinks';
 
 class UserProfile extends Component {
     render() {
@@ -13,7 +14,8 @@ class UserProfile extends Component {
                 <div className="userName"> Username: {this.props.userName} </div>
                 <div className="memberSince"> Member Since: {this.props.memberSince} </div>
 
-                <Link to="/" style={{textDecoration:"none"}}>Home</Link> {/* Link to redirect back to Home */}
+                <NavigationLinks forView="UserProfile"/>
+                <AccountBalance accountBalance={this.props.accountBalance}/>
             </div>
         );
     }

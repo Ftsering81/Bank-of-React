@@ -1,6 +1,9 @@
 .UserProfile {
     text-align: center;
 }
+h1 {
+    font-size: 50px;
+}
 
 .userName {
     font-size: large;

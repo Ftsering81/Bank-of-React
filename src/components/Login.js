@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Redirect} from 'react-router-dom';
 import "./css/Login.css"
+import NavigationLinks from './NavigationLinks';
 
 class LogIn extends Component {
 
@@ -41,6 +42,7 @@ class LogIn extends Component {
         //else
         return (
             <div className="Login">
+                <h1> Log In </h1>
                 <form onSubmit={this.handleSubmit}>
                     <div> 
                         <label htmlFor="userName">User Name</label>
@@ -52,6 +54,7 @@ class LogIn extends Component {
                     </div>
                     <button>Log In</button>
                 </form>
+                <NavigationLinks forView="Login"/>
             </div>
         );
     }
