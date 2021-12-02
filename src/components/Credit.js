@@ -16,7 +16,8 @@ function Credit (props) {
         return (<li key={key}> {credit.description} {credit.amount} {credit.date}</li>)
     })
     return (
-        <div>
+        <div className="Credits">
+            <img src="bank.jpeg" alt="bank"/>
             <h1> CREDITS </h1>
             <ul> {creditListItems} </ul>
             <form onSubmit={props.addCredit}>

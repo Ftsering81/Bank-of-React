@@ -2,16 +2,16 @@
     text-align: center;
 }
 ul {
-    text-align: center;
-    list-style: none;
     font-size: large;
+    text-align: center;
+    list-style: inside; /* Ensures the bullet points are also centered*/
 }
 
 label[for="amount"] {
     margin-left: 20px;
 }
 
-button {
+#addButton {
     margin-left: 20px;
 }
 

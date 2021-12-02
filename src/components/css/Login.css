@@ -2,17 +2,18 @@
   text-align: center;
 }
 
-h1 {
+h1 { /* applies to all h1 elements in the application */
   text-align: center;
-  margin-top: 50px;
+  margin-top: 40px;
   font-size: 50px;
 }
-form {
+
+form { /* applies to all form elements in the application */
     text-align: center;
     margin-top: 50px;
 }
 
-label {
+label { /* applies to all label elements in the application */
     text-align: center;
     margin-right: 10px;
     font-size: large;
@@ -30,7 +31,7 @@ input[name="password"] {
     margin-left: 10px;
 }
   
-button {
+#LoginButton { /* applies to all button elements in the application */
     margin-left: 210px;
     padding: 3px 5px 3px 5px;
     font-weight: bold;
