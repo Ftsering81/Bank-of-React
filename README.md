@@ -1,4 +1,22 @@
-# Getting Started with Create React App
+# Practical Web Development Assignment 4 - Bank of React 
+
+### Goal: 
+
+Create a simple bank web application using React and React Router
+
+### Team members:
+
+Fnu Tsering - Ftsering81
+
+## Lesson Objectives
+
+* Introduce client-side routing
+* Add client-side routing to our React apps using React Router
+* Set up React Router to enable common browser behavior
+* Understand built in React Router components (Route, Router, Switch, Link, Redirect)
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
