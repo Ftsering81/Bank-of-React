@@ -58,7 +58,7 @@ class App extends Component {
   getTodayDate = () => {
     let today = new Date(); //date object representing today's date
     let year = today.getFullYear().toString()
-    let month = today.getMonth().toString() 
+    let month = (today.getMonth() + 1).toString() //add 1 bc 0 represents first month and 11 last month
     if (month.length !== 2) { month = '0' + month }
     let day = today.getDate().toString()
     if(day.length !== 2) { day = '0' + day}
