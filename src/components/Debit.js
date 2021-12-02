@@ -21,6 +21,7 @@ function Debit(props) {
     //returns the view to render/display
     return(
         <div className="Debits">
+            <img src="bank.jpeg" alt="bank"/>
             <h1> DEBITS </h1>
             <div className="debitsList"> 
                 <ul> {debitsListItems} </ul>
@@ -30,7 +31,7 @@ function Debit(props) {
                 <input type="text" name="description"/>
                 <label htmlFor="amount"> Amount: </label>
                 <input type="text" name="amount"/>
-                <button type ="submit"> Add Debit </button>
+                <button type ="submit" id="addButton"> Add Debit </button>
             </form>
             <NavigationLinks forView="Debit"/> {/* the nagivation links */}
             <AccountBalance accountBalance={props.accountBalance}/>

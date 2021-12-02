@@ -42,6 +42,7 @@ class LogIn extends Component {
         //else
         return (
             <div className="Login">
+                <img src="bank.jpeg" alt="bank"/>
                 <h1> Log In </h1>
                 <form onSubmit={this.handleSubmit}>
                     <div> 
@@ -52,7 +53,7 @@ class LogIn extends Component {
                         <label htmlFor="password">Password</label>
                         <input type="text" name="password" />
                     </div>
-                    <button>Log In</button>
+                    <button id="LoginButton">Log In</button>
                 </form>
                 <NavigationLinks forView="Login"/>
             </div>

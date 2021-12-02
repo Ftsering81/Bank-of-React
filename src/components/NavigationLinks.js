@@ -5,13 +5,13 @@ import "./css/NavigationLinks.css"
 function NavigationLinks(props) {
     if(props.forView === "Home") {
         return (
-        <div className="homeNav">
-            <span> <Link to="/login" style={{textDecoration:"none"}}>Log in</Link> </span>
-            <span> <Link to="/userProfile" style={{textDecoration:"none"}}>User Profile</Link> </span> 
-            <span> <Link to= "/debits" style={{textDecoration:"none"}}>Debits</Link> </span>
-            <span> <Link to= "/credits" style={{textDecoration:"none"}}>Credits</Link>  </span>
-        </div>
-        ) 
+            <div className="homeNav">
+                <span> <Link to="/login" style={{textDecoration:"none"}}>Log in</Link> </span>
+                <span> <Link to="/userProfile" style={{textDecoration:"none"}}>User Profile</Link> </span> 
+                <span> <Link to= "/debits" style={{textDecoration:"none"}}>Debits</Link> </span>
+                <span> <Link to= "/credits" style={{textDecoration:"none"}}>Credits</Link>  </span>
+            </div>
+        ); 
     }  
     else if(props.forView === "Debit") {
         return (

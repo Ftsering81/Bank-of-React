@@ -1,9 +1,6 @@
 .UserProfile {
     text-align: center;
 }
-h1 {
-    font-size: 50px;
-}
 
 .userName {
     font-size: large;
@@ -12,5 +9,4 @@ h1 {
 
 .memberSince {
     font-size: large;
-    margin-bottom: 20px;
 }

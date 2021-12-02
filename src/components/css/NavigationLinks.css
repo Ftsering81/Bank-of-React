@@ -1,11 +1,14 @@
+span {
+    margin-left: 10px;
+}
 .loginNav {
-    margin-left: 100px;
     margin-top: 30px;
     font-size: large;
     font-weight: bold;
 }
 ß
 .homeNav {
+    margin-top: 30px;
     font-size: large;
     font-weight: bold;
 }
