@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './components/Home'
 import UserProfile from './components/UserProfile';
 import LogIn from './components/Login'
@@ -136,13 +136,13 @@ class App extends Component {
     return (
       //initalize a router for this component
       <Router> 
-        <div>
-          <Route exact path="/" render= {HomeComponent}/>  {/* Creates a route with url "/" at which the Home component is mounted/displayed*/}
-          <Route exact path="/userProfile" render={UserProfileComponent}/>
-          <Route exact path="/login" render={LogInComponent} />
-          <Route exact path="/debits" render={DebitComponent} />
-          <Route exact path="/credits" render={CreditComponent} />
-        </div>
+          <Switch>
+            <Route exact path="/Bank-of-React" render= {HomeComponent}/>  {/* Creates a route with url "/" at which the Home component is mounted/displayed*/}
+            <Route exact path="/Bank-of-React/userProfile" render={UserProfileComponent}/>
+            <Route exact path="/Bank-of-React/login" render={LogInComponent} />
+            <Route exact path="/Bank-of-React/debits" render={DebitComponent} />
+            <Route exact path="/Bank-of-React/credits" render={CreditComponent} />]
+          </Switch>
       </Router>
     );
   }

@@ -17,7 +17,7 @@ function Credit (props) {
     })
     return (
         <div className="Credits">
-            <img src="bank.jpeg" alt="bank"/>
+            <img src="/Bank-of-React/bank.jpeg" alt="bank"/>
             <h1> CREDITS </h1>
             <ul> {creditListItems} </ul>
             <form onSubmit={props.addCredit}>

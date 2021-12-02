@@ -21,7 +21,7 @@ function Debit(props) {
     //returns the view to render/display
     return(
         <div className="Debits">
-            <img src="bank.jpeg" alt="bank"/>
+            <img src="/Bank-of-React/bank.jpeg" alt="bank"/>
             <h1> DEBITS </h1>
             <div className="debitsList"> 
                 <ul> {debitsListItems} </ul>

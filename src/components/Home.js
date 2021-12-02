@@ -9,7 +9,7 @@ class Home extends Component {
     render() {
         return (
             <div className="Home">
-                <img src="bank.jpeg" alt="bank"/>
+                <img src="/Bank-of-React/bank.jpeg" alt="bank"/>
                 <h1>Bank of React</h1>
 
                 <NavigationLinks forView="Home"/> {/* the nagivation links to other views */}

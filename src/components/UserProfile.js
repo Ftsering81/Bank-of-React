@@ -9,7 +9,7 @@ class UserProfile extends Component {
     render() {
         return(
             <div className='UserProfile'>
-                <img src="bank.jpeg" alt="bank"/>
+                <img src="/Bank-of-React/bank.jpeg" alt="bank"/>
                 <h1> User Profile</h1>
 
                 <div className="userName"> Username: {this.props.userName} </div>

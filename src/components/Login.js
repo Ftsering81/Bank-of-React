@@ -37,12 +37,12 @@ class LogIn extends Component {
     render() {
         //if redirect == true, then render the redirect component which will redirect to the user profile
         if(this.state.redirect) {
-            return (<Redirect to="/userProfile"/>)
+            return (<Redirect to="/Bank-of-React/userProfile"/>)
         }
         //else
         return (
             <div className="Login">
-                <img src="bank.jpeg" alt="bank"/>
+                <img src="/Bank-of-React/bank.jpeg" alt="bank"/>
                 <h1> Log In </h1>
                 <form onSubmit={this.handleSubmit}>
                     <div> 
