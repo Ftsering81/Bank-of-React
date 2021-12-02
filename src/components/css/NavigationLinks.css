@@ -1,0 +1,27 @@
+.loginNav {
+    margin-left: 100px;
+    margin-top: 30px;
+    font-size: large;
+    font-weight: bold;
+}
+ß
+.homeNav {
+    font-size: large;
+    font-weight: bold;
+}
+
+.debitNav {
+    text-align: center;
+    margin-left: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: large;
+    font-weight: bold; 
+}
+
+.userProfileNav {
+    margin-top: 30px;
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 30px;
+}

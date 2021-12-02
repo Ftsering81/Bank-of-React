@@ -100,7 +100,7 @@ class App extends Component {
     // So basically the render prop accepts a function variable that returns a pre-built componet.
     // All we have to do is save our component as a variable like below and pass it straight in as a prop(render).
     const HomeComponent = () => (<Home accountBalance={this.state.accountBalance}/>);
-    const UserProfileComponent = () => (<UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}/>); 
+    const UserProfileComponent = () => (<UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince} accountBalance={this.state.accountBalance}/>); 
     const LogInComponent = () => ( <LogIn user={this.state.currentUser} mockLogin={this.mockLogIn} />);
     const DebitComponent = () => (<Debit addDebit = {this.addDebit} debits = {this.state.debits} accountBalance={this.state.accountBalance} />); 
     
@@ -112,7 +112,7 @@ class App extends Component {
           <Route exact path="/" render= {HomeComponent}/>  {/* Creates a route with url "/" at which the Home component is mounted/displayed*/}
           <Route exact path="/userProfile" render={UserProfileComponent}/>
           <Route exact path="/login" render={LogInComponent} />
-          <Route exact path="/debit" render={DebitComponent} />
+          <Route exact path="/debits" render={DebitComponent} />
         </div>
       </Router>
     );
