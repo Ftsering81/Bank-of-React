@@ -1,4 +1,4 @@
-# Practical Web Development Assignment 4 - Bank of React 
+# Practical Web Dev Assignment 4 - Bank of React 
 
 ### Goal: 
 
