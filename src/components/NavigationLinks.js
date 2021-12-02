@@ -25,7 +25,7 @@ function NavigationLinks(props) {
     }
     else if(props.forView === "Credit") {
         return (
-            <div>
+            <div className="creditNav">
                 <span> <Link to="/login" style={{textDecoration:"none"}}>Log in</Link> </span>
                 <span> <Link to="/userProfile" style={{textDecoration:"none"}}>User Profile</Link> </span> 
                 <span> <Link to= "/debits" style={{textDecoration:"none"}}>Debits</Link> </span>

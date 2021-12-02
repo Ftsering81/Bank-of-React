@@ -18,6 +18,14 @@
     font-size: large;
     font-weight: bold; 
 }
+.creditNav {
+    text-align: center;
+    margin-left: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: large;
+    font-weight: bold; 
+}
 
 .userProfileNav {
     margin-top: 30px;

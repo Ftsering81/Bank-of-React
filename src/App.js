@@ -6,7 +6,8 @@ import UserProfile from './components/UserProfile';
 import LogIn from './components/Login'
 import axios from 'axios' //library for API requests 
 import Debit from './components/Debit'
-import './App.css'
+import Credit from './components/Credit'
+// import './App.css'
 
 class App extends Component {
 
@@ -94,6 +95,9 @@ class App extends Component {
 
   }
 
+  addCredit = (event) => {
+  }
+
   render() { //render is called first time in the first instantiation of the component, then it is called again whenever the state updates
      
     // The component prop in Route won't accept a pre-built component, but React Router has provided an alternative render method/prop that will. 
@@ -103,8 +107,8 @@ class App extends Component {
     const UserProfileComponent = () => (<UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince} accountBalance={this.state.accountBalance}/>); 
     const LogInComponent = () => ( <LogIn user={this.state.currentUser} mockLogin={this.mockLogIn} />);
     const DebitComponent = () => (<Debit addDebit = {this.addDebit} debits = {this.state.debits} accountBalance={this.state.accountBalance} />); 
-    
-    //so basically this render() renders the Home Component at URL "/"
+    const CreditComponent = () => (<Credit addCredit={this.addCredit} credits={this.state.credits} accountBalance={this.state.accountBalance}/>);
+  
     return (
       //initalize a router for this component
       <Router> 
@@ -113,6 +117,7 @@ class App extends Component {
           <Route exact path="/userProfile" render={UserProfileComponent}/>
           <Route exact path="/login" render={LogInComponent} />
           <Route exact path="/debits" render={DebitComponent} />
+          <Route exact path="/credits" render={CreditComponent} />
         </div>
       </Router>
     );
