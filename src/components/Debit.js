@@ -8,7 +8,7 @@ function Debit(props) {
     // props = { addDebit: this.addDebit, debits: this.state.debits, accountBalance: this.state.accountBalance } (this refers to App component)
     const debitsListItems = props.debits.map((debit, index) => {
         let key = ""
-        if (debit.id === "") { //if the debit object doesn't have a key, make its index the key for mapping
+        if (debit.id === "") { //if the debit object doesn't have an id, make its index the key for mapping
             key = index.toString()
         }
         else {

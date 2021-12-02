@@ -7,7 +7,7 @@ class AccountBalance extends Component {
     render() {
         return (
             <div className="balance">
-                Balance: {this.props.accountBalance}
+                <p style={{textAlign: 'center'}}> Balance: {this.props.accountBalance} </p>
             </div>
         );
     }
