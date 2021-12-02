@@ -29,7 +29,7 @@ function Debit(props) {
                 <label htmlFor="description"> Description: </label>
                 <input type="text" name="description"/>
                 <label htmlFor="amount"> Amount: </label>
-                <input type="number" name="amount"/>
+                <input type="text" name="amount"/>
                 <button type ="submit"> Add Debit </button>
             </form>
             <NavigationLinks forView="Debit"/> {/* the nagivation links */}

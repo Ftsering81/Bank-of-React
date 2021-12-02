@@ -18,7 +18,7 @@ class App extends Component {
       accountBalance: 0,
       currentUser: {
         userName: '',
-        memberSince: '11/11/2021'
+        memberSince: ''
       },
       debits: [],
       credits: []
@@ -54,40 +54,44 @@ class App extends Component {
   }
   
 
-
-  //this function is called in the Login componenent and it updates the userName property of the state in this component with new username
-  mockLogIn = (logInfo) => {
-    const newUser = {...this.state.currentUser};
-    newUser.userName = logInfo.userName;
-    this.setState({currentUser: newUser})
-  }
-  // The event is when the user clicks "Add Debit" button. 
-  // The event object will contain the values of the Description input field and the Amount input field
-  addDebit = (event) => {
-
-    event.preventDefault(); //prevent default return behavior
-    //let randomNumID = (Math.random()).toString() 
-    let amount = parseFloat(event.target.amount.value) //parseFloat() method converts a string into a point number
-    let description = event.target.description.value
-
-    // Gets the current date and puts it in YYYY-MM-DD format
-    let today = new Date(); //date object representing current date
+  //Helper function that returns the date in YYYY-MM-DD format for when user adds credit or debit
+  getTodayDate = () => {
+    let today = new Date(); //date object representing today's date
     let year = today.getFullYear().toString()
     let month = today.getMonth().toString() 
     if (month.length !== 2) { month = '0' + month }
     let day = today.getDate().toString()
     if(day.length !== 2) { day = '0' + day}
     let date = year + '-' + month + '-' + day; // YYYY-MM-DD format
+    return (date); 
+  }
 
-    let newDebit = {id: "",
-                    amount: amount,
-                    description: description,
-                    date: date
+  //this function is called in the Login componenent and it updates the userName property of the state in this component with new username
+  mockLogIn = (logInfo) => {
+    const newUser = {...this.state.currentUser};
+    newUser.memberSince = this.getTodayDate()
+    newUser.userName = logInfo.userName;
+    this.setState({currentUser: newUser})
+  }
+
+  // The event is when the user clicks "Add Debit" button. 
+  // The event object will contain the values of the Description input field and the Amount input field
+  addDebit = (event) => {
+    event.preventDefault(); //prevent default return behavior
+    let amount = parseFloat(event.target.amount.value) //parseFloat() method converts a string into a point number
+    let description = event.target.description.value
+    let date = this.getTodayDate()  // Gets the current date in YYYY-MM-DD format
+
+    // create new debit object to add
+    let newDebit = {
+      id: "",
+      amount: amount,
+      description: description,
+      date: date
     }
 
     let debits = [...this.state.debits]; //create a copy of the debits array 
     debits.push(newDebit); //add the newDebit object to the end of the debits array
-  
     let accountBalance = (this.state.accountBalance - amount).toFixed(2) //amount is the new debit amount that was specified in the Amount input field
     
     //Update the debits and accountBalance properties of the state with the new debit array and new balance
@@ -96,6 +100,26 @@ class App extends Component {
   }
 
   addCredit = (event) => {
+    event.preventDefault(); 
+    let description = event.target.description.value
+    let amount = parseFloat(event.target.amount.value)
+    let date = this.getTodayDate() // Gets the current date in YYYY-MM-DD format
+
+    // create new credit object to add
+    let newCredit = {
+      id: "",
+      amount: amount,
+      description: description,
+      date: date
+    }
+
+    //get the new credits array and account balance after adding the new credit
+    let credits = [...this.state.credits] //creates a new array with the state's credits array 
+    credits.push(newCredit) //add new credit object to the credits array
+    let accountBalance = (parseFloat(this.state.accountBalance) + newCredit.amount).toFixed(2) //new account balance
+
+    //Update the state with new credits array and account balance
+    this.setState({credits: credits, accountBalance: accountBalance})
   }
 
   render() { //render is called first time in the first instantiation of the component, then it is called again whenever the state updates
